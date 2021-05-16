@@ -6,14 +6,20 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/12 22:59:41 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/16 23:09:14 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/16 23:15:03 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t	ft_strlen(const char *s)
 {
-	
+	size_t	n;
+
+	n = 0;
+	while (s[n])
+	{
+		n++;
+	}
+	return (n);
 }
