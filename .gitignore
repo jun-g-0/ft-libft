@@ -1,4 +1,4 @@
 a.exe
 main.c
-libft.h.gch
+*.gch
 .vscode

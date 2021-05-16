@@ -1,47 +1,45 @@
- CC := gcc
- CFLAGS := -Wall -Wextra -Werror
- NAME := test
- SRCS := test1.c test2.c test3.c test4.c
- # OBJS := test1.o test2.o test3.o
- OBJS := $(SRCS:.c=.o)
- # SRCS := *.c
- # OBJS := *.o
- 
- all: $(NAME)
- 
- # test: test1.o test2.o test3.o
- $(NAME): $(OBJS)
- # gcc -Wall -Wextra -Werror -o test test1.o test2.o test3.o
- # gcc -Wall -Wextra -Werror -o $(NAME) $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
- 
- # Not recommended
- # test: test1.c test2.c test3.c
- # 	gcc -Wall -Wextra -Werror test1.c test2.c test3.c
- 
- # $^ : (all) /:q!:wq
-  $< : (only the first one)
- 
- # %.o: %.c
- # 	gcc -Wall -Wextra -Werror -c $(SRCS)
- 
- 
- # $(OBJS): $(SRCS)
-	# gcc -Wall -Wextra -Werror -c $(SRCS)
- # ↑　does NOT work when srcs files are related
- 
- # .o.c:
- # 	gcc -Wall -Wextra -Werror -c $(SRCS)
- # ↑　old rule and not clear what it means
- 
- clean:
+CC := gcc
+CFLAGS := -Wall -Wextra -Werror
+
+NAME = libft.a
+
+SRCS = ft_memset.c
+# ft_bzero.c \
+# ft_memcpy.c \
+# ft_memccpy.c \
+# ft_memmove.c \
+# ft_memchr.c \
+# ft_strlen.c \
+# ft_strlcpy.c \
+# ft_strlcat.c \
+# ft_strchr.c \
+# ft_strrchr.c \
+# ft_strnstr.c \
+# ft_strncmp.c \
+# ft_atoi.c \
+# ft_isalpha.c \
+# ft_isdigit.c \
+# ft_isalnum.c \
+# ft_isascii.c \
+# ft_isprint.c \
+# ft_toupper.c \
+# ft_tolower.c \
+# ft_strdup.c \
+# ft_calloc.c
+
+OBJS := $(SRCS:.c=.o)
+
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS)
+
+all: $(NAME)
+
+clean:
 	rm -f $(OBJS)
- 
- # -f option remove without confirmation (regardless of the file premission)
- 
- fclean: clean
+
+fclean: clean
 	rm -f $(NAME)
- 
- re: fclean all
- 
- .PHONY:	all clean fclean re
+
+re: fclean all
+
+.PHONY:	all clean fclean re
