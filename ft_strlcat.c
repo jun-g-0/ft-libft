@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/17 11:45:37 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/17 14:40:05 by jungao           ###   ########.fr       */
+/*   Created: 2021/05/17 14:33:50 by jungao            #+#    #+#             */
+/*   Updated: 2021/05/17 15:27:29 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,28 @@
 static size_t	my_strlen(const char *s);
 static void	*my_memcpy(void *dest, const void *src, size_t n);
 
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
 {
+	size_t	dstlen;
 	size_t	srclen;
 
+	dstlen = my_strlen(dst);
 	srclen = my_strlen(src);
-	if (dstsize > srclen + 1)
+	if (dstsize >= dstlen + srclen + 1)
 	{
-		my_memcpy(dst, src, srclen + 1);
+		my_memcpy(dst + dstlen, src, srclen + 1);
+		return (dstlen + srclen);
 	}
-	else if (dstsize > 0)
+	else if (dstsize >= dstlen + 1)
 	{
-		my_memcpy(dst, src, dstsize - 1);
+		my_memcpy(dst + dstlen, src, dstsize - dstlen - 1);
 		dst[dstsize - 1] = '\0';
+		return (dstlen + (dstsize - dstlen - 1));
 	}
-	return (srclen);
+	else
+	{
+		return (dstsize + srclen);
+	}
 }
 
 static size_t	my_strlen(const char *s)
