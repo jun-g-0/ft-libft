@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 14:33:50 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/17 17:59:09 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/17 18:04:47 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	{
 		my_memcpy(dst + dstlen, src, dstsize - dstlen - 1);
 		dst[dstsize - 1] = '\0';
-		return (srclen + dstsize);
+		return (srclen + dstlen);
 	}
 	else
 	{
