@@ -6,15 +6,15 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 11:45:37 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/17 14:40:05 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/17 17:20:01 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 static size_t	my_strlen(const char *s);
-static void	*my_memcpy(void *dest, const void *src, size_t n);
+static void		*my_memcpy(void *dest, const void *src, size_t n);
 
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	srclen;
 
