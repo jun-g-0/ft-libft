@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:37:54 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 01:05:37 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 01:06:18 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int main()
 	char str1[5] = "ab0";
 	char str2[5] = "ab5";
 	char str3[5] = "";
+	char str4[5] = "ab05";
 
 	for (size_t i = 0; i < 5; i++)
 	{
@@ -47,5 +48,7 @@ int main()
 		printf("ft: %d\n", ft_strncmp(str1, str2, i));
 		printf("or: %d\n", strncmp(str1, str3, i));
 		printf("ft: %d\n", ft_strncmp(str1, str3, i));
+		printf("or: %d\n", strncmp(str1, str4, i));
+		printf("ft: %d\n", ft_strncmp(str1, str4, i));
 	}
 }
