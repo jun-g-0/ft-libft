@@ -6,13 +6,13 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 23:36:31 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 23:38:37 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/18 23:40:13 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
@@ -24,6 +24,6 @@ int		ft_isalpha(int c)
 	}
 	else
 	{
-		return (1);
+		return (0);
 	}
 }
