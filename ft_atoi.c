@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 19:34:32 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/18 23:05:59 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,28 +74,28 @@ long int	overflow(char c, long int *result, int sign)
 {
 	long int	ov_div;
 	long int	ov_mod;
-	
+
 	if (sign > 0)
 	{
 		ov_div = LONG_MAX / 10;
 		ov_mod = LONG_MAX % 10;
-		if (*result > ov_div || (*result == ov_div && (int)c > ov_mod))
+		if (*result > ov_div || (*result == ov_div && (int)(c - '0') > ov_mod))
 			return (LONG_MAX);
 	}
 	else
 	{
 		ov_div = ((LONG_MIN / 10) * sign);
 		ov_mod = ((LONG_MIN % 10) * sign);
-		if (*result > ov_div || (*result == ov_div && (int)c > ov_mod))
+		if (*result > ov_div || (*result == ov_div && (int)(c - '0') > ov_mod))
 			return (LONG_MIN);
 	}
-	*result = *result * 10 + ((long int)c * sign);
+	*result = *result * 10 + ((long int)(c - '0') * sign);
 	return (0);
 }
 
 int	main()
 {
-	char *str = "   +10.";
+	char *str = "   +1000.";
 	int result = ft_atoi(str);
 	printf("%d\n", result);
 }
