@@ -6,11 +6,13 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 23:23:11 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/18 23:32:04 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 #include <limits.h>
 int			my_isdigit(int c);
 int			my_isspace(char c);
@@ -37,7 +39,7 @@ int	ft_atoi(const char *nptr)
 		}
 		nptr++;
 	}
-	return ((int)(result * sign));
+	return ((int)result);
 }
 
 int	my_isdigit(int c)
@@ -90,3 +92,13 @@ long int	overflow(char c, long int *result, int sign)
 	*result = *result * 10 + ((long int)(c - '0') * sign);
 	return (0);
 }
+
+// #include <stdlib.h>
+// int	main()
+// {
+// 	char *str0 = "   -0850.";
+// 	int result = ft_atoi(str0);
+// 	int result2 = atoi(str0);
+// 	printf("%d\n", result);
+// 	printf("%d\n", result2);
+// }
