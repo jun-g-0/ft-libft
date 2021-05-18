@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 14:48:06 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 23:35:58 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/18 23:40:41 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *nptr);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
-// int		ft_isalnum(int c);
+int		ft_isalnum(int c);
 // int		ft_isascii(int c);
 // int		ft_isprint(int c);
 // int		ft_toupper(int c);
