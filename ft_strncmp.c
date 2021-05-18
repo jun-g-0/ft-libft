@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:37:54 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 00:30:51 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 00:31:54 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	}
 	return (0);
-}
-
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-	char str1[5] = "abc5";
-	char str2[5] = "abc8";
-	char str3[5] = "abc1";
-	
-	printf("or: %d\n", strncmp(str1, str2, 3));
-	printf("ft: %d\n", ft_strncmp(str1, str2, 3));
-	printf("or: %d\n", strncmp(str1, str2, 4));
-	printf("ft: %d\n", ft_strncmp(str1, str2, 4));
-	printf("or: %d\n", strncmp(str1, str3, 4));
-	printf("ft: %d\n", ft_strncmp(str1, str3, 4));
 }
