@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 14:48:06 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 23:49:59 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/18 23:56:58 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-// int		ft_toupper(int c);
-// int		ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 // char	*ft_strdup(const char *s1);
 // void	*ft_calloc(size_t count, size_t size);
