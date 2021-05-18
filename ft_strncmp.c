@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:37:54 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 01:04:39 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 01:05:37 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 int main()
 {
-	char str1[5] = "ab";
-	char str2[5] = "abc";
+	char str1[5] = "ab0";
+	char str2[5] = "ab5";
 	char str3[5] = "";
 
 	for (size_t i = 0; i < 5; i++)
