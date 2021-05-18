@@ -17,8 +17,8 @@ SRCS = ft_memset.c \
 		ft_strnstr.c \
 		ft_strncmp.c \
 		ft_atoi.c \
-# ft_isalpha.c \
-ft_isdigit.c \
+		ft_isalpha.c \
+		ft_isdigit.c \
 # ft_isalnum.c \
 # ft_isascii.c \
 # ft_isprint.c \
