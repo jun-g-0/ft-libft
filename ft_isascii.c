@@ -6,13 +6,13 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 23:44:20 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 23:47:18 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/18 23:49:28 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 0177)
 	{
