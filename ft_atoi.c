@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 23:32:04 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/18 23:34:58 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,16 +89,6 @@ long int	overflow(char c, long int *result, int sign)
 		if (*result > ov_div || (*result == ov_div && (int)(c - '0') > ov_mod))
 			return (LONG_MIN);
 	}
-	*result = *result * 10 + ((long int)(c - '0') * sign);
+	*result = *result * 10 + (sign * (long int)(c - '0'));
 	return (0);
 }
-
-// #include <stdlib.h>
-// int	main()
-// {
-// 	char *str0 = "   -0850.";
-// 	int result = ft_atoi(str0);
-// 	int result2 = atoi(str0);
-// 	printf("%d\n", result);
-// 	printf("%d\n", result2);
-// }
