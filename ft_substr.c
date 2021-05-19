@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:39 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 11:51:00 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 11:52:10 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	while (s[i] != '\0')
 	{
-		if (i >= start && len - i + start > 0)
+		if (i >= start && len + start > i)
 		{
 			new_str[i] = s[i];
 		}
