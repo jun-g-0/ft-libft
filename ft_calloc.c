@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:08:41 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:20:09 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:30:18 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,19 @@ void	my_bzero(void *s, size_t n)
 		dst[i] = 0;
 		i++;
 		n--;
+	}
+}
+
+#include <stdlib.h>
+#include <stdio.h>
+int main()
+{
+	for (size_t i = 0; i < 3; i++)
+	{
+		for (size_t j = 0; j < 3; j++)
+		{
+			printf("i = %d, j = %d\n", i, j);
+			printf("o = %p, f = %%p\n", calloc(i, j), ft_calloc(i, j));
+		}
 	}
 }
