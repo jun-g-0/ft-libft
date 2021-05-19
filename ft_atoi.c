@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 13:12:09 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:52:42 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <limits.h>
 static int			my_isdigit(int c);
 static int			my_isspace(char c);
-static long int	overflow(char c, long int *result, int sign);
+static long int		overflow(char c, long int *result, int sign);
 
 int	ft_atoi(const char *nptr)
 {

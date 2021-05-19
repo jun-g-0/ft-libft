@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:52:03 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:54:27 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = (int)my_strlen(s1);
 	while (end > start && my_include(s1[(end - 1)], set))
 		end--;
-	if (!(new_str = malloc(sizeof(char) * (end - start + 1))))
+	new_str = malloc(sizeof(char) * (end - start + 1));
+	if (!new_str)
 		return (NULL);
 	i = 0;
 	while (i + start < end)

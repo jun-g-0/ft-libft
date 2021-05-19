@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:07:59 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 12:17:11 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:53:58 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	s1_l = my_strlen(s1);
 	s2_l = my_strlen(s2);
-	if (!(new_str = malloc(sizeof(char) * (s1_l + s2_l + 1))))
+	new_str = malloc(sizeof(char) * (s1_l + s2_l + 1));
+	if (!new_str)
 	{
 		return (NULL);
 	}

@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:39 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 12:05:04 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:54:50 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!(new_str = malloc(sizeof(char) * len + 1)))
+	new_str = malloc(sizeof(char) * len + 1);
+	if (!new_str)
 	{
 		return (NULL);
 	}
