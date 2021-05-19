@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 21:50:55 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 22:02:14 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 22:03:03 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		if (lst[0] != NULL)
 		{
 			tmp = lst[0];
-			if (tmp->next != NULL)
+			while (tmp->next != NULL)
 			{
 				tmp = tmp->next;
 			}
