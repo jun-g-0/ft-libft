@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 23:48:00 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 23:48:50 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,30 +84,9 @@ static long int	overflow(char c, long int *result, int sign)
 	{
 		ov_div = LONG_MIN / 10;
 		ov_mod = ((LONG_MIN % 10) * sign);
-		if (*result < ov_div || (*result == ov_div && (long int)(c - '0') > ov_mod))
+		if (*result < ov_div || (*result == ov_div && (int)(c - '0') > ov_mod))
 			return (LONG_MIN);
 	}
 	*result = *result * 10 + (sign * (long int)(c - '0'));
 	return (0);
-}
-
-#include <stdio.h>
-
-int	main()
-{
-	char strs[5][30] = {
-		"   -9223372036854775808.",
-		"   -9223372036854775809.",
-		"   -9223372036854775810.",
-		"   -9223372036854775900.",
-		"   -92233720368547758080."
-	};
-	for (size_t i = 0; i < 5; i++)
-	{
-		int result1 = ft_atoi(strs[i]);
-		int result2 = atoi(strs[i]);
-		printf("%d\n", result1);
-		printf("%d\n", result2);
-		printf("%d\n\n", result1 == result2);
-	}
 }
