@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 09:30:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:54:08 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:54:36 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,4 @@ static void	*my_memcpy(void *dest, const void *src, size_t n)
 		n--;
 	}
 	return (dest);
-}
-
- #include <string.h>
-  #include <stdio.h>
-int main()
-{
-	char *str = "string";
-	char *result1 = strdup(str);
-	printf("result1 = %p\n", result1);
-	printf("result NULL = %p\n", strdup(NULL));
-	char *result2 = strdup(NULL);
-	printf("result2 = %p\n", result2);
 }
