@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 21:19:58 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 21:32:27 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 21:42:11 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	new_ele = (t_list *)malloc(sizeof(t_list));
 	if (new_ele == NULL)
 		return (NULL);
-	new_ele -> content = content;
-	new_ele -> next = NULL;
+	new_ele->content = content;
+	new_ele->next = NULL;
 	return (new_ele);
 }
