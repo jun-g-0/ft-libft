@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:03:18 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:05:20 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 
 	if (my_strlen(s1) == 0)
-		return (my_strdup(""));
+		return (new_str = my_strdup(""));
 	start = 0;
 	while (my_include(s1[start], set))
 		start++;
