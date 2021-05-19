@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:35:53 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:37:12 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,28 +30,28 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!(new_str = malloc(sizeof(char) * (end - start + 1))))
 		return (NULL);
 	i = 0;
-	// while (i + start < end)
-	// {
-	// 	new_str[i] = s1[i + start];
-	// 	i++;
-	// }
-	// new_str[i] = '\0';
+	while (i + start < end)
+	{
+		new_str[i] = s1[i + start];
+		i++;
+	}
+	new_str[i] = '\0';
 	return (new_str);
 }
 
 static int	my_include(char c, char const *set)
 {
-	int	i;
+	// int	i;
 
-	i = 0;
-	while (set[i] != '\0')
-	{
-		if (set[i] == c)
-		{
-			return (1);
-		}
-		i++;
-	}
+	// i = 0;
+	// while (set[i] != '\0')
+	// {
+	// 	if (set[i] == c)
+	// 	{
+	// 		return (1);
+	// 	}
+	// 	i++;
+	// }
 	return (0);
 }
 
