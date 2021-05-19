@@ -6,14 +6,15 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:02:22 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:03:18 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 static int		my_include(char c, char const *set);
 static size_t	my_strlen(const char *s);
-static char	*my_strdup(const char *s1);
+static void		*my_memcpy(void *dest, const void *src, size_t n);
+static char		*my_strdup(const char *s1);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -81,6 +82,24 @@ static char	*my_strdup(const char *s1)
 	}
 	my_memcpy(new_str, s1, (my_strlen(s1) + 1));
 	return (new_str);
+}
+
+static void	*my_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char	*dest_c;
+	unsigned char	*src_c;
+	int				i;
+
+	dest_c = (unsigned char *)dest;
+	src_c = (unsigned char *)src;
+	i = 0;
+	while (n > 0)
+	{
+		dest_c[i] = src_c[i];
+		i++;
+		n--;
+	}
+	return (dest);
 }
 
 // #include <stdio.h>
