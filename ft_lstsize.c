@@ -6,13 +6,13 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 21:42:45 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 22:34:41 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 22:58:04 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	result;
 
