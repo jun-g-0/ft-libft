@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:56:16 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 17:25:37 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 17:26:57 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ char	**ft_split(char const *s, char c)
 				free(result[--j]);
 			free(result);
 		}
+		j++;
 	}
 	result[j] = NULL;
 	return (result);
@@ -73,7 +74,7 @@ static char	*my_input(char const *s, char c, int *i)
 	count = 0;
 	while (s[*i] == c && s[*i] != '\0')
 		*i += 1;
-	while (s[*i] != c && s[*i] != '\0' && count++ > 0)
+	while (s[*i] != c && s[*i] != '\0')
 	{
 		count++;
 		*i += 1;
