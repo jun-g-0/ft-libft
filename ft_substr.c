@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:39 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 11:49:22 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 11:49:44 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		{
 			new_str[i] = s[i];
 		}
+		i++;
 	}
 	new_str[i] = '\0';
 	return (new_str);
