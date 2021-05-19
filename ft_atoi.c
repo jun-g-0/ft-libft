@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 23:34:58 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 13:12:09 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <limits.h>
-int			my_isdigit(int c);
-int			my_isspace(char c);
-long int	overflow(char c, long int *result, int sign);
+static int			my_isdigit(int c);
+static int			my_isspace(char c);
+static long int	overflow(char c, long int *result, int sign);
 
 int	ft_atoi(const char *nptr)
 {
@@ -42,7 +42,7 @@ int	ft_atoi(const char *nptr)
 	return ((int)result);
 }
 
-int	my_isdigit(int c)
+static int	my_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{
@@ -54,7 +54,7 @@ int	my_isdigit(int c)
 	}
 }
 
-int	my_isspace(char c)
+static int	my_isspace(char c)
 {
 	if (c == '\t' || c == '\n' || c == '\v')
 	{
@@ -70,7 +70,7 @@ int	my_isspace(char c)
 	}
 }
 
-long int	overflow(char c, long int *result, int sign)
+static long int	overflow(char c, long int *result, int sign)
 {
 	long int	ov_div;
 	long int	ov_mod;

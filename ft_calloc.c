@@ -6,12 +6,12 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:08:41 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:44:54 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 13:12:40 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void	my_bzero(void *s, size_t n);
+static void	my_bzero(void *s, size_t n);
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -31,7 +31,7 @@ void	*ft_calloc(size_t count, size_t size)
 	return (new_ptr);
 }
 
-void	my_bzero(void *s, size_t n)
+static void	my_bzero(void *s, size_t n)
 {
 	unsigned char	*dst;
 	int				i;
