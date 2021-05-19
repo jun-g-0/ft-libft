@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:56:16 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 17:24:56 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 17:25:37 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	**ft_split(char const *s, char c)
 			free(result);
 		}
 	}
-	result[j] == NULL;
+	result[j] = NULL;
 	return (result);
 }
 
