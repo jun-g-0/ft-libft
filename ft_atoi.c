@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 21:10:12 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 23:28:42 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ static long int	overflow(char c, long int *result, int sign)
 	{
 		ov_div = ((LONG_MIN / 10) * sign);
 		ov_mod = ((LONG_MIN % 10) * sign);
-		if (*result > ov_div || (*result == ov_div && (int)(c - '0') > ov_mod))
+		if (*result > ov_div || (*result == ov_div && (int)(c - '0') < ov_mod))
 			return (LONG_MIN);
 	}
 	*result = *result * 10 + (sign * (long int)(c - '0'));
