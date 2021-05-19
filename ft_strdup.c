@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 09:30:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:07:21 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:46:23 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@ char	*ft_strdup(const char *s1)
 {
 	char *new_str;
 
-	if (s1 == NULL)
-	{
-		return (NULL);
-	}
 	new_str = malloc(sizeof(char) * (my_strlen(s1) + 1));
 	if (!new_str)
 	{
