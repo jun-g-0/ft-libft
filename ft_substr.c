@@ -6,14 +6,11 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:39 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 11:49:04 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 11:49:22 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static size_t	my_strlen(const char *s);
-static void		*my_memcpy(void *dest, const void *src, size_t n);
-size_t			my_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
