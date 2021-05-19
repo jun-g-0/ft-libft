@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:56:16 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 17:36:29 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 17:39:29 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,18 +91,3 @@ static char	*my_input(char const *s, char c, int *i)
 	}
 	return (s_str);
 }
-
-// #include <stdio.h>
-
-// int main(int argc, char const *argv[])
-// {
-// 	printf("%d, %s\n", argc, argv[0]);
-// 	char *str1 = "      split       this for   me  !       ";
-	
-// 	char **result = ft_split(str1, ' ');
-// 	for (size_t i = 0; i < (sizeof(result) / sizeof(char **)); i++)
-// 	{
-// 		printf("%s\n", result[i]);
-// 	}
-// 	return 0;
-// }
