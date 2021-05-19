@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 13:41:01 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 13:41:34 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	k = 0;
 	while (k + start < j + 1)
 	{
-		new_str[k] == s1[k + start];
+		new_str[k] = s1[k + start];
 		k++;
 	}
 	new_str[k] = '\0';
