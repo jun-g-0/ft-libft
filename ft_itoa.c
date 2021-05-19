@@ -6,12 +6,13 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:39:54 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 18:47:53 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 18:55:04 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int		my_get_count(int n);
+static int	my_get_count(int n);
+static int	my_abs(int n);
 
 char	*ft_itoa(int n)
 {
@@ -32,13 +33,13 @@ char	*ft_itoa(int n)
 		result[0] = '-';
 	while (n != 0)
 	{
-		result[count--] = (char)((n % 10) + '0');
+		result[count--] = (char)(my_abs(n % 10) + '0');
 		n = n / 10;
 	}
 	return (result);
 }
 
-int		my_get_count(int n)
+static int	my_get_count(int n)
 {
 	int		num;
 	num = 0;
@@ -50,6 +51,18 @@ int		my_get_count(int n)
 		n = n / 10;
 	}
 	return num;
+}
+
+static int	my_abs(int n)
+{
+	if (n >= 0)
+	{
+		return (n);
+	}
+	else
+	{
+		return (-n);
+	}
 }
 
 #include <stdio.h>
