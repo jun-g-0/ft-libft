@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:39:54 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 18:45:28 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 18:47:53 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ char	*ft_itoa(int n)
 	if (result == NULL)
 		return (NULL);
 	result[count--] = '\0';
+	if (n == 0)
+	{
+		result[0] = '0';
+		return (result);
+	}
 	if (n < 0)
 		result[0] = '-';
 	while (n != 0)
