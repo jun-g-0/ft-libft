@@ -6,12 +6,14 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:39 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 11:36:34 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 11:42:22 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+static size_t	my_strlen(const char *s);
 static void		*my_memcpy(void *dest, const void *src, size_t n);
+size_t			my_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -21,9 +23,37 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		return (NULL);
 	}
-	my_memcpy(new_str, &s[start], len);
-	new_str[len] = '\n';
+	my_strlcpy(new_str, &s[start], len);
 	return (new_str);
+}
+
+size_t	my_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+{
+	size_t	srclen;
+
+	srclen = my_strlen(src);
+	if (dstsize > srclen + 1)
+	{
+		my_memcpy(dst, src, srclen + 1);
+	}
+	else if (dstsize > 0)
+	{
+		my_memcpy(dst, src, dstsize - 1);
+		dst[dstsize - 1] = '\0';
+	}
+	return (srclen);
+}
+
+static size_t	my_strlen(const char *s)
+{
+	size_t	n;
+
+	n = 0;
+	while (s[n])
+	{
+		n++;
+	}
+	return (n);
 }
 
 static void	*my_memcpy(void *dest, const void *src, size_t n)
