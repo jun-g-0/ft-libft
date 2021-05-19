@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:41:09 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:42:17 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] != '\0' && my_include(s1[start], set))
 		start++;
-	end = my_strlen(s1);
+	end = (int)my_strlen(s1);
 	while (end > 0 && my_include(s1[(end - 1)], set))
 		end--;
 	printf("\nline 31");
