@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 21:33:00 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 21:37:50 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 21:40:40 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new -> next = lst[0];
+	t_list	*tmp;
+
+	tmp = lst[0];
+	lst[0] = new;
+	lst[0] -> next = tmp;
 }
