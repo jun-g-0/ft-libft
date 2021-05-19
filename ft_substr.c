@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:39 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 11:48:33 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 11:49:04 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ size_t			my_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*new_str;
-	int		i;
+	char			*new_str;
+	unsigned int	i;
 
 	i = 0;
 	if (!(new_str = malloc(sizeof(char) * len + 1)))
