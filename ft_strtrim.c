@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:31:44 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:35:53 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!(new_str = malloc(sizeof(char) * (end - start + 1))))
 		return (NULL);
 	i = 0;
-	while (i + start < end)
-	{
-		new_str[i] = s1[i + start];
-		i++;
-	}
-	new_str[i] = '\0';
+	// while (i + start < end)
+	// {
+	// 	new_str[i] = s1[i + start];
+	// 	i++;
+	// }
+	// new_str[i] = '\0';
 	return (new_str);
 }
 
@@ -71,16 +71,16 @@ static size_t	my_strlen(const char *s)
 #define TRIM_SET_PLACEHOLDER " \n\t"
 #include <string.h>
 
-int main(int argc, char const *argv[])
-{
-	printf("%d, %s\n", argc, argv[0]);
-	char *str1 = "";
-	char *str2 = "";
+// int main(int argc, char const *argv[])
+// {
+// 	printf("%d, %s\n", argc, argv[0]);
+// 	char *str1 = "";
+// 	char *str2 = "";
 	
-	char *result = ft_strtrim(str1, TRIM_SET_PLACEHOLDER);
-	int result2 = strcmp(result, str2);
-	printf("%d\n", result2);
-	printf("%p\n", result);
-	printf("%d%d\n", (int)result[0], (int)result[1]);
-	return 0;
-}
+// 	char *result = ft_strtrim(str1, TRIM_SET_PLACEHOLDER);
+// 	int result2 = strcmp(result, str2);
+// 	printf("%d\n", result2);
+// 	printf("%p\n", result);
+// 	printf("%d%d\n", (int)result[0], (int)result[1]);
+// 	return 0;
+// }
