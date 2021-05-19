@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:08:41 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:39:15 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:44:32 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,14 @@ void	my_bzero(void *s, size_t n);
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *new_ptr;
+	void		*result;
+	size_t		i;
 
-	// if (count == 0 || size == 0)
-	// {
-	// 	count = 1;
-	// 	size = 1;
-	// }
-	new_ptr = malloc(count * size);
-	if (!new_ptr)
-	{
+	i = 0;
+	if (!(result = malloc(count * size)))
 		return (NULL);
-	}
-	my_bzero(new_ptr, count * size);
-	return (new_ptr);
+	my_bzero(result, count * size);
+	return (result);
 }
 
 void	my_bzero(void *s, size_t n)
