@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:08:41 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:36:46 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:39:15 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void *new_ptr;
 
-	if (count == 0 || size == 0)
-	{
-		count = 1;
-		size = 1;
-	}
+	// if (count == 0 || size == 0)
+	// {
+	// 	count = 1;
+	// 	size = 1;
+	// }
 	new_ptr = malloc(count * size);
 	if (!new_ptr)
 	{
