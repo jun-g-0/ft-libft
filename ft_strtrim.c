@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 13:41:34 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 13:52:08 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new_str;
 	int		start;
-	int		j;
-	int		k;
+	int		end;
+	int		i;
 
 	start = 0;
 	while (my_include(s1[start], set))
 		start++;
-	j = my_strlen(s1) - 1;
-	while (my_include(s1[j], set))
-		j--;
-	if (!(new_str = malloc(sizeof(char) * ((j - start + 1) + 1))))
+	end = my_strlen(s1) - 1;
+	if (my_strlen(s1) == 0)
+		end = 0;
+	while (my_include(s1[end], set))
+		end--;
+	if (!(new_str = malloc(sizeof(char) * ((end - start + 1) + 1))))
 		return (NULL);
-	k = 0;
-	while (k + start < j + 1)
+	i = 0;
+	while (i + start < end + 1)
 	{
-		new_str[k] = s1[k + start];
-		k++;
+		new_str[i] = s1[i + start];
+		i++;
 	}
-	new_str[k] = '\0';
+	new_str[i] = '\0';
 	return (new_str);
 }
 
