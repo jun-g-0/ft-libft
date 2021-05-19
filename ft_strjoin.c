@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:07:59 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 12:16:34 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 12:17:11 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	my_memcpy(new_str, s1, s1_l);
 	my_memcpy(&new_str[s1_l], s2, s2_l);
-	new_str[(s1_l + s2_l + 1)] = '\0';
+	new_str[(s1_l + s2_l)] = '\0';
 	return (new_str);
 }
 
