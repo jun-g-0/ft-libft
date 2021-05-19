@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:24:08 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:31:17 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,15 +68,18 @@ static size_t	my_strlen(const char *s)
 }
 
 // #include <stdio.h>
+// #define TRIM_SET_PLACEHOLDER " \n\t"
+// #include <string.h>
 
 // int main(int argc, char const *argv[])
 // {
 // 	printf("%d, %s\n", argc, argv[0]);
 // 	char *str1 = "";
-// 	char *str2 = " ";
+// 	char *str2 = "";
 	
-// 	char *result = ft_strtrim(str1, str2);
-// 	printf("%s\n", result);
+// 	char *result = ft_strtrim(str1, TRIM_SET_PLACEHOLDER);
+// 	int result2 = strcmp(result, str2);
+// 	printf("%d\n", result2);
 // 	printf("%p\n", result);
 // 	printf("%d%d\n", (int)result[0], (int)result[1]);
 // 	return 0;
