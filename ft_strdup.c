@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 09:30:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:53:44 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:54:08 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,4 @@ int main()
 	printf("result NULL = %p\n", strdup(NULL));
 	char *result2 = strdup(NULL);
 	printf("result2 = %p\n", result2);
-	// printf("%p\n", strdup(NULL));
 }
