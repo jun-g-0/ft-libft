@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:08:41 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:31:44 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:35:42 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,11 @@ int main()
 		for (size_t j = 0; j < 3; j++)
 		{
 			printf("i = %zu, j = %zu\n", i, j);
-			printf("o = %p, f = %p\n", calloc(i, j), ft_calloc(i, j));
+			char *result1 = calloc(i, j);
+			char *result2 = ft_calloc(i, j);
+			printf("o = %p, f = %p\n", result1, result2);
+			printf("o = %d%d%d%d%d\n", result1[0], result1[1], result1[2], result1[3], result1[4]);
+			printf("f = %d%d%d%d%d\n", result2[0], result2[1], result2[2], result2[3], result2[4]);
 		}
 	}
 }
