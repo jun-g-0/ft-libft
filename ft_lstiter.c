@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 22:27:34 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 22:29:37 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 22:30:17 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst != NULL)
 	{
-		f(lst);
+		f(lst->content);
 		lst = lst->next;
 	}
 }
