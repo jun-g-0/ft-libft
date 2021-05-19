@@ -6,13 +6,14 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 13:52:08 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:02:22 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 static int		my_include(char c, char const *set);
 static size_t	my_strlen(const char *s);
+static char	*my_strdup(const char *s1);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -21,12 +22,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	int		i;
 
+	if (my_strlen(s1) == 0)
+		return (my_strdup(""));
 	start = 0;
 	while (my_include(s1[start], set))
 		start++;
 	end = my_strlen(s1) - 1;
-	if (my_strlen(s1) == 0)
-		end = 0;
 	while (my_include(s1[end], set))
 		end--;
 	if (!(new_str = malloc(sizeof(char) * ((end - start + 1) + 1))))
@@ -68,3 +69,31 @@ static size_t	my_strlen(const char *s)
 	}
 	return (n);
 }
+
+static char	*my_strdup(const char *s1)
+{
+	char *new_str;
+
+	new_str = malloc(sizeof(char) * (my_strlen(s1) + 1));
+	if (!new_str)
+	{
+		return (NULL);
+	}
+	my_memcpy(new_str, s1, (my_strlen(s1) + 1));
+	return (new_str);
+}
+
+// #include <stdio.h>
+
+// int main(int argc, char const *argv[])
+// {
+// 	printf("%d, %s\n", argc, argv[0]);
+// 	char *str1 = "";
+// 	char *str2 = " ";
+	
+// 	char *result = ft_strtrim(str1, str2);
+// 	printf("%s\n", result);
+// 	printf("%p\n", result);
+// 	printf("%d%d\n", (int)result[0], (int)result[1]);
+// 	return 0;
+// }
