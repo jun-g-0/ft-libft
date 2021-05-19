@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 14:48:06 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 00:12:37 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:08:52 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-// char	*ft_strdup(const char *s1);
-// void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
+void	*ft_calloc(size_t count, size_t size);
 
 // char	*ft_substr(char const *s, unsigned int start, size_t len);
 // char	*ft_strjoin(char const *s1, char const *s2);
