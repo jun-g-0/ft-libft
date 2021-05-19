@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:42:59 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:43:36 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = (int)my_strlen(s1);
 	while (end > 0 && my_include(s1[(end - 1)], set))
 		end--;
-	printf("\nline 31, end = %d", end);
+	printf("\nline 31, end = %d, start = %d", end, start);
 	printf("\nend = %d, start = %d, end - start + 1 = %d", end, start, end - start + 1);
 	if (!(new_str = malloc(sizeof(char) * (end - start + 1))))
 		return (NULL);
