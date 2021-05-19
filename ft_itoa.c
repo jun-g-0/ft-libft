@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:39:54 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 18:55:38 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 18:56:25 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char	*ft_itoa(int n)
 static int	my_get_count(int n)
 {
 	int		num;
+
 	num = 0;
 	if (n <= 0)
 		num++;
@@ -50,7 +51,7 @@ static int	my_get_count(int n)
 		num++;
 		n = n / 10;
 	}
-	return num;
+	return (num);
 }
 
 static int	my_abs(int n)
@@ -63,22 +64,4 @@ static int	my_abs(int n)
 	{
 		return (-n);
 	}
-}
-
-#include <stdio.h>
-#include <limits.h>
-
-int main(int argc, char const *argv[])
-{
-	printf("%d, %s\n", argc, argv[0]);
-	int ints[5] = {-623, 156, -0, INT_MAX, INT_MIN};
-	
-	for (size_t i = 0; i < 5; i++)
-	{
-		printf("%d: %s\n", ints[i], ft_itoa(ints[i]));
-	}
-	
-	// char *result = ft_substr(str1, 5, 20);
-	// printf("%s\n", result);
-	return 0;
 }
