@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:56:16 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 17:26:57 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 17:36:29 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,27 @@ static char	*my_input(char const *s, char c, int *i)
 	s_str = malloc(sizeof(char) * (count + 1));
 	if (s_str == NULL)
 		return (NULL);
-	s_str[count - 1] = '\0';
+	s_str[count] = '\0';
 	j = 0;
 	while (count - j > 0)
-		s_str[count - j - 2] = s[*i - j - 1];
+	{
+		s_str[count - j - 1] = s[*i - j - 1];
+		j++;
+	}
 	return (s_str);
 }
+
+// #include <stdio.h>
+
+// int main(int argc, char const *argv[])
+// {
+// 	printf("%d, %s\n", argc, argv[0]);
+// 	char *str1 = "      split       this for   me  !       ";
+	
+// 	char **result = ft_split(str1, ' ');
+// 	for (size_t i = 0; i < (sizeof(result) / sizeof(char **)); i++)
+// 	{
+// 		printf("%s\n", result[i]);
+// 	}
+// 	return 0;
+// }
