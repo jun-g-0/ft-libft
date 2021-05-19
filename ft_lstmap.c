@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 22:36:48 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 22:58:12 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 23:15:59 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_ele = ft_lstnew(f(lst->next->content));
 		if (new_ele == NULL)
 		{
-			ft_lstclear(first, del);
+			ft_lstclear(&first, del);
 			return (NULL);
 		}
 		ft_lstlast(first)->next = new_ele;
