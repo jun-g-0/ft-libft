@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:45:48 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 14:51:02 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[start] != '\0' && my_include(s1[start], set))
 		start++;
 	end = (int)my_strlen(s1);
-	while (end > 0 && my_include(s1[(end - 1)], set))
+	while (end > start && my_include(s1[(end - 1)], set))
 		end--;
-	printf("\nline 31, s1 = %s, end = %d, start = %d", s1, end, start);
-	printf("\nend = %d, start = %d, end - start + 1 = %d", end, start, end - start + 1);
+	// printf("\nline 31, s1 = %s, end = %d, start = %d", s1, end, start);
+	// printf("\nend = %d, start = %d, end - start + 1 = %d", end, start, end - start + 1);
 	if (!(new_str = malloc(sizeof(char) * (end - start + 1))))
 		return (NULL);
-	printf("\nline 34");
+	// printf("\nline 34");
 	i = 0;
 	while (i + start < end)
 	{
@@ -78,7 +78,7 @@ static size_t	my_strlen(const char *s)
 // int main(int argc, char const *argv[])
 // {
 // 	printf("%d, %s\n", argc, argv[0]);
-// 	char *str1 = "";
+// 	char *str1 = "  \t \t \n   \n\n\n\t";
 // 	char *str2 = "";
 	
 // 	char *result = ft_strtrim(str1, TRIM_SET_PLACEHOLDER);
