@@ -38,8 +38,19 @@ SRCS = ft_memset.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 
+BONUS = ft_lstnew.c \
+		# ft_lstadd_front \
+		# ft_lstsize \
+		# ft_lstlast \
+		# ft_lstadd_back \
+		# ft_lstdelone \
+		# ft_lstclear \
+		# ft_lstiter \
+		# ft_lstmap \
 
-OBJS := $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
+
+BONUS_OBJS = $(BONUS:.c=.o)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
@@ -54,4 +65,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY:	all clean fclean re
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY:	all clean fclean re bonus

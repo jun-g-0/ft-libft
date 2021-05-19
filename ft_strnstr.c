@@ -6,11 +6,10 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 23:15:18 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/18 16:34:40 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 21:10:57 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 static size_t	my_strlen(const char *s);
 

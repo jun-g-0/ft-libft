@@ -6,13 +6,11 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:52:42 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 21:10:12 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 #include <limits.h>
 static int			my_isdigit(int c);
 static int			my_isspace(char c);
