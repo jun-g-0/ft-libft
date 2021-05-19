@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 09:30:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 10:51:41 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 10:51:57 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,6 @@ int main()
 {
 	char *str = "string";
 	// char *result = strdup(NULL);
-	printf("%p\n", strdup(str));
+	printf("%p\n", strdup(NULL));
 	// printf("%p\n", strdup(NULL));
 }
