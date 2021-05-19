@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 21:42:45 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 21:44:07 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/19 21:45:00 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_lstsize(t_list *lst)
 
 	if (lst == NULL)
 	{
-		return (0)
+		return (0);
 	}
 	result = 1;
 	if (lst->next != NULL)
