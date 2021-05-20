@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:39 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/20 10:31:21 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 10:31:57 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*new_str;
 	unsigned int	i;
 	unsigned int	j;
-	size_t			s_len;
 
 	i = 0;
 	j = 0;
