@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 22:55:31 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/17 23:13:15 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 22:21:42 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	size_t	i;
 	char	*save;
 
 	i = 0;
@@ -23,13 +23,13 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (s[i] == (char)c)
 		{
-			save = (char *)(s + i);
+			save = (char *)(&s[i]);
 		}
 		i++;
 	}
 	if ((char)c == '\0')
 	{
-		return ((char *)(s + i));
+		return ((char *)(&s[i]));
 	}
 	return (save);
 }

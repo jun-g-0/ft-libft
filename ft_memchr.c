@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 11:25:03 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/17 11:43:14 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 21:57:03 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*dst;
-	int				i;
+	size_t			i;
 
 	dst = (unsigned char *)s;
 	i = 0;
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (dst[i] == (unsigned char)c)
 		{
-			return (dst + i);
+			return (&dst[i]);
 		}
 		i++;
 		n--;

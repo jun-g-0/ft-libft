@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:08:41 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/20 00:41:07 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 20:01:08 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	*ft_calloc(size_t count, size_t size)
 static void	my_bzero(void *s, size_t n)
 {
 	unsigned char	*dst;
-	int				i;
+	size_t			i;
 
 	dst = (unsigned char *)s;
 	i = 0;

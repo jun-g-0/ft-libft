@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 22:16:48 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 22:26:36 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 21:26:45 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
-	while (lst[0] != NULL)
+	while (*lst != NULL)
 	{
-		tmp = lst[0]->next;
-		ft_lstdelone(lst[0], del);
-		lst[0] = tmp;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
-	lst = NULL;
 }

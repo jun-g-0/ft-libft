@@ -6,26 +6,25 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:18:32 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 14:54:27 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 22:24:38 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static int		my_include(char c, char const *set);
-static size_t	my_strlen(const char *s);
+static int		my_includes(char c, char const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new_str;
-	int		start;
-	int		end;
-	int		i;
+	size_t	start;
+	size_t	end;
+	size_t	i;
 
 	start = 0;
-	while (s1[start] != '\0' && my_include(s1[start], set))
+	while (s1[start] != '\0' && my_includes(s1[start], set))
 		start++;
-	end = (int)my_strlen(s1);
-	while (end > start && my_include(s1[(end - 1)], set))
+	end = (int)ft_strlen(s1);
+	while (end > start && my_includes(s1[end - 1], set))
 		end--;
 	new_str = malloc(sizeof(char) * (end - start + 1));
 	if (!new_str)
@@ -40,9 +39,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (new_str);
 }
 
-static int	my_include(char c, char const *set)
+static int	my_includes(char c, char const *set)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (set[i] != '\0')
@@ -54,16 +53,4 @@ static int	my_include(char c, char const *set)
 		i++;
 	}
 	return (0);
-}
-
-static size_t	my_strlen(const char *s)
-{
-	size_t	n;
-
-	n = 0;
-	while (s[n])
-	{
-		n++;
-	}
-	return (n);
 }

@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:56:16 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 17:39:29 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 20:26:43 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static char	*my_input(char const *s, char c, int *i);
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	result = malloc(sizeof(char *) * (1 + my_count_p(s, c)));
 	if (result == NULL)
@@ -33,6 +33,7 @@ char	**ft_split(char const *s, char c)
 			while (j > 0)
 				free(result[--j]);
 			free(result);
+			return (NULL);
 		}
 		j++;
 	}
@@ -43,7 +44,7 @@ char	**ft_split(char const *s, char c)
 static int	my_count_p(char const *s, char c)
 {
 	int		count;
-	int		i;
+	size_t	i;
 
 	count = 0;
 	i = 0;
@@ -69,7 +70,7 @@ static char	*my_input(char const *s, char c, int *i)
 {
 	int		count;
 	char	*s_str;
-	int		j;
+	size_t	j;
 
 	count = 0;
 	while (s[*i] == c && s[*i] != '\0')
@@ -84,7 +85,7 @@ static char	*my_input(char const *s, char c, int *i)
 		return (NULL);
 	s_str[count] = '\0';
 	j = 0;
-	while (count - j > 0)
+	while (count > j)
 	{
 		s_str[count - j - 1] = s[*i - j - 1];
 		j++;

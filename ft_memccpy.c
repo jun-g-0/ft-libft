@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 10:59:28 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/17 11:18:22 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 21:56:51 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*dest_p;
 	unsigned char	*src_p;
-	int				i;
+	size_t			i;
 
 	dest_p = (unsigned char *)dest;
 	src_p = (unsigned char *)src;
@@ -26,7 +26,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		dest_p[i] = src_p[i];
 		if (src_p[i] == (unsigned char)c)
 		{
-			return (dest_p + i + 1);
+			return (&dest_p[i + 1]);
 		}
 		i++;
 		n--;

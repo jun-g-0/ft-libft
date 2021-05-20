@@ -6,7 +6,7 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 00:13:08 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/19 01:08:49 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 22:08:43 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*s1_p;
 	unsigned char	*s2_p;
 
@@ -25,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	s1_p = (unsigned char *)s1;
 	s2_p = (unsigned char *)s2;
-	while (n - i > 0)
+	while (n > i)
 	{
 		if (s1_p[i] != s2_p[i])
 		{
