@@ -1,0 +1,5 @@
+a.exe
+main.c
+*.gch
+.vscode
+*.out

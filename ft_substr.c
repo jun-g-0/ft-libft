@@ -6,11 +6,12 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 10:55:39 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/20 10:20:10 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 10:31:21 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+static size_t	my_newlen(char const *s, unsigned int start, size_t len);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -21,11 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-	s_len = ft_strlen(s);
-	if (len > s_len - start)
-	{
-		len = s_len - start;
-	}
+	len = my_newlen(s, start, len);
 	new_str = malloc(sizeof(char) * len + 1);
 	if (new_str == NULL)
 		return (NULL);
@@ -40,4 +37,22 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	new_str[j] = '\0';
 	return (new_str);
+}
+
+static size_t	my_newlen(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (s[i] != '\0')
+	{
+		if (i >= start && len > j)
+		{
+			j++;
+		}
+		i++;
+	}
+	return (j);
 }
