@@ -6,13 +6,14 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 16:58:38 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/20 22:00:42 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 22:43:11 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 static long int		overflow(char c, long int *result, int sign);
+static int	my_isspace(char c);
 
 int	ft_atoi(const char *nptr)
 {
@@ -21,7 +22,7 @@ int	ft_atoi(const char *nptr)
 
 	sign = 1;
 	result = 0;
-	while (ft_isspace(*nptr))
+	while (my_isspace(*nptr))
 		nptr++;
 	if (*nptr == '-')
 		sign = -1;
@@ -59,4 +60,20 @@ static long int	overflow(char c, long int *result, int sign)
 	}
 	*result = *result * 10 + (sign * (long int)(c - '0'));
 	return (0);
+}
+
+static int	my_isspace(char c)
+{
+	if (c == '\t' || c == '\n' || c == '\v')
+	{
+		return (1);
+	}
+	else if (c == '\f' || c == '\r' || c == ' ')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

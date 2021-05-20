@@ -6,13 +6,13 @@
 /*   By: jungao <jungao@student.42tokyo.jp>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 14:56:16 by jungao            #+#    #+#             */
-/*   Updated: 2021/05/20 20:26:43 by jungao           ###   ########.fr       */
+/*   Updated: 2021/05/20 22:49:00 by jungao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static int	my_count_p(char const *s, char c);
-static char	*my_input(char const *s, char c, int *i);
+static size_t	my_count_p(char const *s, char c);
+static char		*my_input(char const *s, char c, size_t *i);
 
 char	**ft_split(char const *s, char c)
 {
@@ -41,7 +41,7 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
-static int	my_count_p(char const *s, char c)
+static size_t	my_count_p(char const *s, char c)
 {
 	int		count;
 	size_t	i;
@@ -66,9 +66,9 @@ static int	my_count_p(char const *s, char c)
 	return (count);
 }
 
-static char	*my_input(char const *s, char c, int *i)
+static char	*my_input(char const *s, char c, size_t *i)
 {
-	int		count;
+	size_t	count;
 	char	*s_str;
 	size_t	j;
 
