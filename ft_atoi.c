@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <limits.h>
 static long int		overflow(char c, long int *result, int sign);
-static int	my_isspace(char c);
+static int			my_isspace(char c);
 
 int	ft_atoi(const char *nptr)
 {
