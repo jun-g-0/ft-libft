@@ -41,17 +41,17 @@ char	*ft_itoa(int n)
 
 static int	my_get_count(int n)
 {
-	int		num;
+	int		count;
 
-	num = 0;
+	count = 0;
 	if (n <= 0)
-		num++;
+		count++;
 	while (n != 0)
 	{
-		num++;
+		count++;
 		n = n / 10;
 	}
-	return (num);
+	return (count);
 }
 
 static int	my_abs(int n)
